@@ -1,0 +1,100 @@
+Script started on 2023-05-16 15:59:42+03:00 [TERM="xterm-256color" TTY="/dev/pts/0" COLUMNS="163" LINES="23"]
+]0;juaxe@juaxe-FX503VM: ~/koulu/part12-containers-applications/todo-app/todo-backend[01;32mjuaxe@juaxe-FX503VM[00m:[01;34m~/koulu/part12-containers-applications/todo-app/todo-backend[00m$ exitdocker exec -it todo-backend-mongo-1 mongoshPostman[Kpostmansudo ln -s Postman/Postman /usr/local/bin/postmanpostman[KPostmandocker exec -it todo-backend-mongo-1 mongosh -u root -p example
+]0;mongosh mongodb://<credentials>@127.0.0.1:27017/?directConnection=true&serverSelectionTimeoutMS=2000Current Mongosh Log ID:	64637e4760be50901ef59476
+Connecting to:		[1m[32mmongodb://<credentials>@127.0.0.1:27017/?directConnection=true&serverSelectionTimeoutMS=2000&appName=mongosh+1.8.2[0m
+Using MongoDB:		6.0.5
+[1m[33mUsing Mongosh[0m:		1.8.2
+
+For mongosh info see: [1mhttps://docs.mongodb.com/mongodb-shell/[0m
+
+[1G[0J [1G[1m[33m------[0m
+   [1m[33mThe server generated these startup warnings when booting[0m
+   2023-05-16T12:56:26.626+00:00: Using the XFS filesystem is strongly recommended with the WiredTiger storage engine. See http://dochub.mongodb.org/core/prodnotes-filesystem
+   2023-05-16T12:56:27.303+00:00: vm.max_map_count is too low
+[1m[33m------[0m
+
+[1m[33m------[0m
+   Enable MongoDB's free cloud-based monitoring service, which will then receive and display
+   metrics about your deployment (disk utilization, CPU, operation statistics, etc).
+   
+   The monitoring data will be available on a MongoDB website with a unique URL accessible to you
+   and anyone you share the URL with. MongoDB may use this information to make product
+   improvements and to suggest MongoDB products and deployment options to you.
+   
+   To enable free monitoring, run the following command: db.enableFreeMonitoring()
+   To permanently disable this reminder, run the following command: db.disableFreeMonitoring()
+[1m[33m------[0m
+
+[1G[0Jtest> [7Gshow bd[1G[0Jtest> show b[13G[1G[0Jtest> show [12Gdbs
+[1madmin[0m         100.00 KiB
+[1mconfig[0m         84.00 KiB
+[1mlocal[0m          72.00 KiB
+[1mthe_database[0m   56.00 KiB
+[1G[0Jtest> [7Guse the_database
+switched to db the_database
+[1G[0Jthe_database> [15Gshow collections
+[1mtodos[0m
+[1G[0Jthe_database> [15Gdb.todos.find([[1G[0Jthe_database> db.todos.find([29G[[1G[0Jthe_database> db.todos.find([29G{}][1G[0Jthe_database> db.todos.find({}[31G)
+[
+  {
+    _id: ObjectId("646367b7de18cb00e1902bba"),
+    text: [32m'Kikkelis kokkelis'[39m,
+    done: [33mfalse[39m
+  },
+  {
+    _id: ObjectId("646367b7de18cb00e1902bbb"),
+    text: [32m'Learn about containers'[39m,
+    done: [33mfalse[39m
+  }
+]
+[1G[0Jthe_database> [15Gdb.todos.insertOne(
+[1G[0J... [5G<d[36mdo[39mdocumr[1G[0J... <docum[11Gen[36mdocument[39m>,
+Uncaught:
+[1m[31mSyntaxError[0m: Support for the experimental syntax 'jsx' isn't currently enabled (2:1):
+
+[0m [90m 1 |[39m db[33m.[39mtodos[33m.[39minsertOne([0m
+[0m[31m[1m>[22m[39m[90m 2 |[39m [33m<[39m[33mdocument[39m[33m>[39m[33m,[39m[0m
+[0m [90m   |[39m [31m[1m^[22m[39m[0m
+[0m [90m 3 |[39m[0m
+
+Add @babel/preset-react (https://git.io/JfeDR) to the 'presets' section of your Babel config to enable transformation.
+If you want to leave it as-is, add @babel/plugin-syntax-jsx (https://git.io/vb4yA) to the 'plugins' section to enable parsing.
+
+[1G[0Jthe_database> [15G[1G[0Jthe_database> db.todos.insertOne( <document>,[46G[1D[1C[1D[1C { [1G[0Jthe_database> db.todos.insertOne( <document>, {[48G[1G[0Jthe_database> db.todos.insertOne( <document>, [47G[1G[0Jthe_database> db.todos.insertOne( <document>,[46G[1G[0Jthe_database> db.todos.insertOne( <document>[45G[1G[0Jthe_database> db.todos.insertOne( <document[44G[1G[0Jthe_database> db.todos.insertOne( <documen[43G[1G[0Jthe_database> db.todos.insertOne( <docume[42G[1G[0Jthe_database> db.todos.insertOne( <docum[41G[1G[0Jthe_database> db.todos.insertOne( <docu[40G[1G[0Jthe_database> db.todos.insertOne( <doc[39G[1G[0Jthe_database> db.todos.insertOne( <do[38G[1G[0Jthe_database> db.todos.insertOne( <d[37G[1G[0Jthe_database> db.todos.insertOne( <[36G[1G[0Jthe_database> db.todos.insertOne( [35G{wor[1G[0Jthe_database> db.todos.insertOne( {wo[38G[1G[0Jthe_database> db.todos.insertOne( {w[37G[1G[0Jthe_database> db.todos.insertOne( {[36Gtext[33mtext[39m:[32m"[39m[32mI[39m[32mn[39m[32mc[39m[32mr[39m[32me[39m[32ma[39m[32ms[39m[32me[39m [32mt[39m[32mh[39m[32me[39m [32mn[39m[32mu[39m[32mm[39m[32mb[39m[32me[39m[32mr[39m [32mo[39m[32mf[39m [32mt[39m[32mo[39m[32mo[39m[32ml[39m[32ms[39m [32mi[39m[32mn[39m [32mm[39m[32my[39m [32mt[39m[32mo[39m[32mo[39m[32ml[39m[32mb[39m[32me[39m[32ml[39m[32mt[39m[32m"[39m, d[36mdo[39mdone=fals[33mfalse[39m} )
+[1G[0J... [5G;
+Uncaught:
+[1m[31mSyntaxError[0m: Invalid shorthand property initializer. (1:77)
+
+[0m[31m[1m>[22m[39m[90m 1 |[39m db[33m.[39mtodos[33m.[39minsertOne( {text[33m:[39m[32m"Increase the number of tools in my toolbelt"[39m[33m,[39m done[33m=[39m[36mfalse[39m} )[0m
+[0m [90m   |[39m                                                                              [31m[1m^[22m[39m[0m
+[0m [90m 2 |[39m [33m;[39m[0m
+[0m [90m 3 |[39m[0m
+
+[1G[0Jthe_database> [15G[1G[0Jthe_database> db.todos.insertOne( {[33mtext[39m:[32m"Increase the number of tools in my toolbelt"[39m, done=[33mfalse[39m} ) ;[103G[1D[1D[1D[1G[0Jthe_database> db.todos.insertOne[44m([49m {[33mtext[39m:[32m"Increase the number of tools in my toolbelt"[39m, done=[33mfalse[39m} ) ;[100G[1D[1G[0Jthe_database> db.todos.insertOne( {[33mtext[39m:[32m"Increase the number of tools in my toolbelt"[39m, done=[33mfalse[39m} ) ;[99G[1D[1G[0Jthe_database> db.todos.insertOne( [44m{[49m[33mtext[39m:[32m"Increase the number of tools in my toolbelt"[39m, done=[33mfalse[39m} ) ;[98G[1D[1G[0Jthe_database> db.todos.insertOne( {[33mtext[39m:[32m"Increase the number of tools in my toolbelt"[39m, done=[33mfalse[39m} ) ;[97G[1D[1D[1D[1D[1D[1C[1G[0Jthe_database> db.todos.insertOne( {[33mtext[39m:[32m"Increase the number of tools in my toolbelt"[39m, donefalse} ) ;[92G[1G[0Jthe_database> db.todos.insertOne( {[33mtext[39m:[32m"Increase the number of tools in my toolbelt"[39m, [33mdone[39m:[33mfalse[39m} ) ;[93G[1C[1C[1C[1C[1C[1G[0Jthe_database> db.todos.insertOne( [44m{[49m[33mtext[39m:[32m"Increase the number of tools in my toolbelt"[39m, [33mdone[39m:[33mfalse[39m} ) ;[98G[1C[1G[0Jthe_database> db.todos.insertOne( {[33mtext[39m:[32m"Increase the number of tools in my toolbelt"[39m, [33mdone[39m:[33mfalse[39m} ) ;[99G[1C[1G[0Jthe_database> db.todos.insertOne[44m([49m {[33mtext[39m:[32m"Increase the number of tools in my toolbelt"[39m, [33mdone[39m:[33mfalse[39m} ) ;[100G[1C[1G[0Jthe_database> db.todos.insertOne( {[33mtext[39m:[32m"Increase the number of tools in my toolbelt"[39m, [33mdone[39m:[33mfalse[39m} ) ;[101G[1C[1C[1G[0Jthe_database> db.todos.insertOne( {[33mtext[39m:[32m"Increase the number of tools in my toolbelt"[39m, [33mdone[39m:[33mfalse[39m} ) [102G
+{
+  acknowledged: [33mtrue[39m,
+  insertedId: ObjectId("64637f0a60be50901ef59477")
+}
+[1G[0Jthe_database> [15G[1G[0Jthe_database> db.todos.insertOne( {[33mtext[39m:[32m"Increase the number of tools in my toolbelt"[39m, [33mdone[39m:[33mfalse[39m} ) [102G[1G[0Jthe_database> db.todos.insertOne( {[33mtext[39m:[32m"Increase the number of tools in my toolbelt"[39m, done=[33mfalse[39m} ) ;[103G[1G[0Jthe_database> db.todos.insertOne( <document>,[46G[1G[0Jthe_database> db.todos.find({})[32G[1G[0Jthe_database> db.todos.insertOne( <document>,[46G[1G[0Jthe_database> db.todos.find({})[32G
+[
+  {
+    _id: ObjectId("646367b7de18cb00e1902bba"),
+    text: [32m'Kikkelis kokkelis'[39m,
+    done: [33mfalse[39m
+  },
+  {
+    _id: ObjectId("646367b7de18cb00e1902bbb"),
+    text: [32m'Learn about containers'[39m,
+    done: [33mfalse[39m
+  },
+  {
+    _id: ObjectId("64637f0a60be50901ef59477"),
+    text: [32m'Increase the number of tools in my toolbelt'[39m,
+    done: [33mfalse[39m
+  }
+]
+[1G[0Jthe_database> [15G
+]0;juaxe@juaxe-FX503VM: ~/koulu/part12-containers-applications/todo-app/todo-backend[01;32mjuaxe@juaxe-FX503VM[00m:[01;34m~/koulu/part12-containers-applications/todo-app/todo-backend[00m$ exit
+exit
+
+Script done on 2023-05-16 16:03:26+03:00 [COMMAND_EXIT_CODE="0"]
