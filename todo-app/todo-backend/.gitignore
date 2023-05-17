@@ -62,5 +62,6 @@ typings/
 
 # docker
 mongo_data/
+redis_data/
 .docker-compose.dev.yml.swo
 .docker-compose.dev.yml.swp
