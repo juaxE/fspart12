@@ -1,7 +1,9 @@
 const express = require('express');
 const { Todo } = require('../mongo');
 const { findById } = require('../mongo/models/Todo');
+const { getAsync, setAsync} = require('../redis/index.js')
 const router = express.Router();
+
 
 /* GET todos listing. */
 router.get('/', async (_, res) => {
@@ -15,6 +17,13 @@ router.post('/', async (req, res) => {
     text: req.body.text,
     done: false
   })
+const currentAmount = await getAsync('added_todos')
+let parsedAmount = parseInt(currentAmount)
+  if(isNaN(parsedAmount)) {
+    parsedAmount = 0
+  }
+parsedAmount += 1
+await setAsync('added_todos', parsedAmount)
   res.send(todo);
 });
 
