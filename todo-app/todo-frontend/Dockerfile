@@ -4,10 +4,11 @@ WORKDIR /usr/src/app
 
 COPY . .
 
-ENV REACT_APP_BACKEND_URL=http://localhost:3001
+ENV REACT_APP_BACKEND_URL=http://localhost:3001 
+ENV CI=true
 
 RUN npm ci
-
+RUN npm run test
 RUN npm run build
 
 # This is a new stage, everything before this is gone, except the files we want to COPY
